@@ -2,22 +2,22 @@ steps:
   - id: 'tf init'
     name: 'hashicorp/terraform:1.0.0'
     entrypoint: sh
-    args: ["-c","terraform -chdir=/home/manikumargolla9/quantiphiauto init -upgrade "]
+    args: ["-c","terraform -chdir=quantiphiauto init -upgrade "]
   - id: 'tf plan'
     name: 'hashicorp/terraform:1.0.0'
     entrypoint: sh
-    args: ["-c","terraform -chdir=/home/manikumargolla9/quantiphiauto  -out=plan.out"]    
+    args: ["-c","terraform -chdir=quantiphiauto  -out=plan.out"]    
   - id: 'tf apply'
     name: 'hashicorp/terraform:1.0.0'
     entrypoint: sh
-    args: ["-c","terraform -chdir=/home/manikumargolla9/quantiphiauto apply plan.out"]    
+    args: ["-c","terraform -chdir=quantiphiauto apply plan.out"]    
   - id: 'tf destroy'
     name: 'hashicorp/terraform:1.0.0'
     entrypoint: sh
-    args: ["-c","terraform -chdir=/home/manikumargolla9/quantiphiauto plan -destroy -out=plan.out"]    
+    args: ["-c","terraform -chdir=quantiphiauto plan -destroy -out=plan.out"]    
   - id: 'tf destroy plan'
     name: 'hashicorp/terraform:1.0.0'
     entrypoint: sh
-    args: ["-c","terraform -chdir=/home/manikumargolla9/quantiphiauto apply plan.out"]    
+    args: ["-c","terraform -chdir=quantiphiauto apply plan.out"]    
 options:
   logging: CLOUD_LOGGING_ONLY
