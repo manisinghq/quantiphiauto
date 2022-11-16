@@ -2,7 +2,7 @@ steps:
   - id: 'tf init'
     name: 'hashicorp/terraform:1.0.0'
     entrypoint: sh
-    args: ["-c","terraform -chdir=quantiphiauto init -upgrade "]
+    args: ["-c","terraform -chdir=manikumarquantiphi9/quantiphiauto init -upgrade "]
   - id: 'tf plan'
     name: 'hashicorp/terraform:1.0.0'
     entrypoint: sh
