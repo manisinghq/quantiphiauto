@@ -2,20 +2,20 @@ steps:
   - id: 'tf init'
     name: 'hashicorp/terraform:1.0.0'
     entrypoint: sh
-    args: ["-c","terraform  init -upgrade "]
+    args: ["-c","terraform -chdir=quantiphiauto init -upgrade "]
   - id: 'tf plan'
     name: 'hashicorp/terraform:1.0.0'
     entrypoint: sh
-    args: ["-c","terraform -out=plan.out"]    
+    args: ["-c","terraform -chdir=quantiphiauto -out=plan.out"]    
   - id: 'tf apply'
     name: 'hashicorp/terraform:1.0.0'
     entrypoint: sh
-    args: ["-c","terraform apply plan.out"]    
+    args: ["-c","terraform -chdir=quantiphiauto apply plan.out"]    
   - id: 'tf destroy'
     name: 'hashicorp/terraform:1.0.0'
     entrypoint: sh
-    args: ["-c","terraform -destroy -out=plan.out"]    
+    args: ["-c","terraform -chdir=quantiphiauto -destroy -out=plan.out"]    
   - id: 'tf destroy plan'
     name: 'hashicorp/terraform:1.0.0'
     entrypoint: sh
-    args: ["-c","terraform apply plan.out"]    
+    args: ["-c","terraform -chdir=quantiphiauto apply plan.out"]    
