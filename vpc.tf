@@ -1,4 +1,3 @@
-manikumargolla9@minikube4:~/terrsformproject/vpc.tf$ cat vpc.tf 
 ############################
 # SERVICE ACCOUNT (OPTIONAL)
 ############################
