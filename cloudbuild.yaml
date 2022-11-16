@@ -14,11 +14,11 @@ steps:
   - id: 'tf destroy'
     name: 'hashicorp/terraform:1.0.0'
     entrypoint: sh
-    args: ["-c","terraform destroy"]    
+    args: ["-c","terraform destroy --auto-approve"]    
   - id: 'tf destroy plan'
     name: 'hashicorp/terraform:1.0.0'
     entrypoint: sh
-    args: ["-c","terraform apply"]    
+    args: ["-c","terraform apply --auto-approve"]    
 options:
   logging: CLOUD_LOGGING_ONLY
 
