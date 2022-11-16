@@ -1,5 +1,5 @@
 steps:
-options:
+-options:
   logging: None
 - id: 'tf plan'
   name: 'hashicorp/terraform:1.0.0'
