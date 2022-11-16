@@ -49,10 +49,10 @@ variable "instances_name" {
   default     = "terravm"
 }
 
-variable "admin" {
-  description = "OS user"
-  default  = "centos"
-}
+#variable "admin" {
+ # description = "OS user"
+ # default  = "centos"
+#}
 
 # VNIC INFO
         variable "private_ip" {
