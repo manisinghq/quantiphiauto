@@ -1,4 +1,6 @@
 steps:
+options:
+  logging: CLOUD_LOGGING_ONLY
 - id: 'tf plan'
   name: 'hashicorp/terraform:1.0.0'
   entrypoint: 'sh'
