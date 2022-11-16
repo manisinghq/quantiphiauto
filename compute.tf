@@ -25,7 +25,7 @@ data "google_client_config" "current" {
   zone     = var.zone
   machine_type = var.vm_type
   metadata = {
-   ssh-keys = "${var.admin}:${file("/home/manikumargolla9/.ssh/id_rsa.pub")}"   # Change Me
+   #ssh-keys = "${var.admin}:${file("/home/manikumargolla9/.ssh/id_rsa.pub")}"   # Change Me
     #metadata_startup_script = "sudo apt-get update; sudo apt install -y apache2; sudo service apache2 status"
    #startup-script        = ("${file(var.user_data)}")
   #  startup-script-custom = "stdlib::info Hello World"
